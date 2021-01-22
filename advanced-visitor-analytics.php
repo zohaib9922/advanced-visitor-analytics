@@ -27,3 +27,8 @@ add_action('admin_menu', 'ava_admin_menu');
 function ava_dashboard_page() {
     echo "<h1>Visitor Analytics Dashboard</h1>";
 }
+
+function ava_track_session() {    
+    if (!session_id()) session_start();
+    $_SESSION['ava_visit'] = time();
+}

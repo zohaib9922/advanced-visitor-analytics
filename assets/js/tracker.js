@@ -10,3 +10,7 @@ window.addEventListener("scroll", () => {
     let scroll = (window.scrollY / document.body.scrollHeight) * 100;
     console.log("Scroll Depth:", scroll);
 });
+
+document.addEventListener("click", function(e) {
+    console.log("Heatmap click at:", e.pageX, e.pageY);
+});
